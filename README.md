@@ -9,7 +9,7 @@
 - - - -
 ### Summaries
 
-1. **10-04-2015**:
+**10-04-2015**:
 
 	- Training presentation.
 	
@@ -39,7 +39,7 @@
 
 - - - -	
 
-2. **13-04-2015**:
+**13-04-2015**:
 
 	- Discuss about the .gitignore file.
 	

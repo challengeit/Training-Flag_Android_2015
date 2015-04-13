@@ -44,13 +44,29 @@
 	
 	- Discuss the Android Stack and the JVM vs Dalvik vs ART virtual machines.
 	
+	- IoC - Inversion of Control.
+	
 	- First Android project:
 	
-		- The Android's project folder structure;
+		- The Android's project folder structure
 		
-		- Activity layout (usage of the LinearLayout);
+		- Activity layout (usage of the LinearLayout)
 		
-		- Activity class (ActionListeners, get the references for the Views components).
+		- Android's R class (Resources class)
+		
+		- Activity class (ActionListeners, get the references for the Views components)
+		
+	*Links/resources from this day*:
+	
+	- [IoC](http://en.wikipedia.org/wiki/Inversion_of_control)
+	
+	- [Android Studio](https://developer.android.com/tools/studio/index.html)
+	
+	- [Activity](https://developer.android.com/reference/android/app/Activity.html)
+	
+	- [R Class](https://developer.android.com/reference/android/R.html)
+	
+	- [LinearLayout](https://developer.android.com/guide/topics/ui/layout/linear.html)
 		
 	*TPC*:
 	

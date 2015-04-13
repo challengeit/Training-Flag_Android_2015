@@ -1,13 +1,13 @@
-### Main repository for the FLAG Android Training - 2015
+## Main repository for the FLAG Android Training - 2015
 
-##### Bibliography
+### Bibliography
 
 - Book: [Learning Android - Marko Gargenta](http://shop.oreilly.com/product/0636920010883.do)
 
 - Official Documentation for Android: [Android Developers](http://developer.android.com/index.html)
 
-
-##### Summaries
+- - - -
+### Summaries
 
 1. **10-04-2015**:
 
@@ -36,7 +36,8 @@
 	- See what is the .gitignore file.
 	
 	- Push the first Android Application to the remote repository.
-	
+
+- - - -	
 
 2. **13-04-2015**:
 
@@ -71,3 +72,6 @@
 	*TPC*:
 	
 	- Search for the reason why the Activity loses is state when the device is rotated.
+
+- - - -
+

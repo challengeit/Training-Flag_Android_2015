@@ -73,5 +73,3 @@
 	
 	- Search for the reason why the Activity loses is state when the device is rotated.
 
-- - - -
-

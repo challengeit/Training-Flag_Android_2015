@@ -37,7 +37,6 @@
 	
 	- Push the first Android Application to the remote repository.
 
-- - - -	
 
 **13-04-2015**:
 

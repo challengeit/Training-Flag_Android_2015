@@ -6,7 +6,6 @@
 
 - Official Documentation for Android: [Android Developers](http://developer.android.com/index.html)
 
-- - - -
 ### Summaries
 
 **10-04-2015**:
@@ -36,7 +35,6 @@
 	- See what is the .gitignore file.
 	
 	- Push the first Android Application to the remote repository.
-
 
 **13-04-2015**:
 

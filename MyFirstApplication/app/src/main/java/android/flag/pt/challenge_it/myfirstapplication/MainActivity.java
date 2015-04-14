@@ -9,23 +9,40 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-
+/**
+ * Main activity for the first Android application.
+ * Contains two buttons and one text view.
+ * The buttons increments and decrements the integer value of the text view.
+ *
+ * @author Challenge.IT
+ */
+public class MainActivity extends ActionBarActivity implements View.OnClickListener
+{
     private TextView txtCounter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        // Always call the method from the super class!!!
         super.onCreate(savedInstanceState);
+
+        // This line "connects" the layout with this activity.
         setContentView(R.layout.activity_main);
 
+        // Get the text view for update the integer value.
         txtCounter = (TextView)findViewById(R.id.txtCounter);
         txtCounter.setText("0");
 
-
+        // Get the buttons and set the click listener.
+        // In this case, the listener is the "this", so this Activity class
+        // have to implements the interface View.OnClickListener.
         Button btnIncr = (Button)findViewById(R.id.btnIncr);
+        Button btnDecr = (Button)findViewById(R.id.btnDecr);
         btnIncr.setOnClickListener(this);
+        btnDecr.setOnClickListener(this);
+
+        // The next code demonstrates the usage of the anonymous class for define
+        // the click listeners for the buttons, instead of use the Activity itself.
         /*
         btnIncr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,11 +51,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 txtCounter.setText((current + 1) + "");
             }
         });
-        */
 
-        Button btnDecr = (Button)findViewById(R.id.btnDecr);
-        btnDecr.setOnClickListener(this);
-        /*
         btnDecr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +61,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         });
         */
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -61,6 +73,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onClick(View v)
     {
+        // Verify which the button was clicked.
         if(v.getId() == R.id.btnIncr)
         {
             int current = Integer.parseInt(txtCounter.getText().toString());

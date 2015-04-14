@@ -8,7 +8,7 @@
 
 ### Summaries
 
-**10-04-2015**:
+- **10-04-2015**:
 
 	- Training presentation.
 	
@@ -36,7 +36,9 @@
 	
 	- Push the first Android Application to the remote repository.
 
-**13-04-2015**:
+---
+
+- **13-04-2015**:
 
 	- Discuss about the .gitignore file.
 	

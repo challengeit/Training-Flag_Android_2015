@@ -3,6 +3,7 @@ package android.flag.pt.challenge_it.myfirstapplication;
 import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -18,11 +19,15 @@ import android.widget.Toast;
  */
 public class MainActivity extends ActionBarActivity implements View.OnClickListener
 {
+    private final static String LOG_TAG = "LOG_TAG";
+
     private TextView txtCounter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        Log.d(LOG_TAG, "onCreate");
+
         // Always call the method from the super class!!!
         super.onCreate(savedInstanceState);
 
@@ -90,6 +95,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onSaveInstanceState(Bundle outState)
     {
+        Log.d(LOG_TAG, "onSaveInstanceState");
+
         super.onSaveInstanceState(outState);
         outState.putString("COUNTER_VALUE", txtCounter.getText().toString());
     }
@@ -97,7 +104,57 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState)
     {
+        Log.d(LOG_TAG, "onRestoreInstanceState");
+
         super.onRestoreInstanceState(savedInstanceState);
         txtCounter.setText(savedInstanceState.getString("COUNTER_VALUE"));
+    }
+
+    @Override
+    protected void onStart()
+    {
+        Log.d(LOG_TAG, "onStart");
+
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume()
+    {
+        Log.d(LOG_TAG, "onResume");
+
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause()
+    {
+        Log.d(LOG_TAG, "onPause");
+
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop()
+    {
+        Log.d(LOG_TAG, "onStop");
+
+        super.onStop();
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        Log.d(LOG_TAG, "onRestart");
+
+        super.onRestart();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        Log.d(LOG_TAG, "onDestroy");
+
+        super.onDestroy();
     }
 }

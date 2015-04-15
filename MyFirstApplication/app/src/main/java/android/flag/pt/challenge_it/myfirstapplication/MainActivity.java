@@ -1,13 +1,13 @@
 package android.flag.pt.challenge_it.myfirstapplication;
 
-import android.content.DialogInterface;
+import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Main activity for the first Android application.
@@ -85,5 +85,19 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             int current = Integer.parseInt(txtCounter.getText().toString());
             txtCounter.setText((current - 1) + "");
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState)
+    {
+        super.onSaveInstanceState(outState);
+        outState.putString("COUNTER_VALUE", txtCounter.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        txtCounter.setText(savedInstanceState.getString("COUNTER_VALUE"));
     }
 }

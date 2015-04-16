@@ -72,3 +72,15 @@
 	
 	- Search for the reason why the Activity loses is state when the device is rotated.
 
+---
+
+- **15-04-2015**:
+
+	- Discuss the Activity Life cylce.
+	
+	- Use the onSaveInstanceState and onRestoreInstaceSate to save state when the activity is rotated.
+	
+	*Links/resources from this day*:
+	
+	- [Activity](http://developer.android.com/reference/android/app/Activity.html) 
+

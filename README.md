@@ -83,4 +83,34 @@
 	*Links/resources from this day*:
 	
 	- [Activity](http://developer.android.com/reference/android/app/Activity.html) 
+	
+---
+
+- **17-04-2015**:
+
+	- Use the Toasts.
+	
+	- Create one button programmatically.
+	
+	- Navigation between Activities.
+	
+	- Intents (implicit and explicit).
+	
+	- Use the intents to pass information between Activities.
+	
+	- Context (Activity context vs Application context). See the possible memory leaks when the context is not used correctly.
+	
+	
+	*Links/resources from this day*:
+	
+	- [Toast](http://developer.android.com/reference/android/widget/Toast.html)
+		
+	- [startActivity](http://developer.android.com/reference/android/content/Context.html#startActivity%28android.content.Intent%29)
+		
+	- [Intent](http://developer.android.com/reference/android/content/Intent.html)
+		
+	- [Context](http://developer.android.com/reference/android/content/Context.html)
+		
+	- [Avoiding memory leaks](http://android-developers.blogspot.pt/2009/01/avoiding-memory-leaks.html)
+
 

@@ -112,5 +112,11 @@
 	- [Context](http://developer.android.com/reference/android/content/Context.html)
 		
 	- [Avoiding memory leaks](http://android-developers.blogspot.pt/2009/01/avoiding-memory-leaks.html)
+	
+	*TPC*:
+	
+	- Update the counter value through the startActivityForResult method.
+	
+	
 
 

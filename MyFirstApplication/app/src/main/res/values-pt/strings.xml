@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">A Minha Primeira Aplicação</string>
+
+    <string name="action_settings">Definições</string>
+    <string name="title_activity_second">Segunda</string>
+    <string name="title_activity_result">Resultado</string>
+    <string name="inc">Incrementar</string>
+    <string name="dec">Decrementar</string>
+</resources>

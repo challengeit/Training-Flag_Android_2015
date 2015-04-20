@@ -18,6 +18,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
+ * Demonstration of the AsyncTask for make I/O, slow operations that not
+ * blocks the UI.
+ *
  * @author Challenge.IT
  */
 public class MainActivity extends Activity
@@ -37,6 +40,8 @@ public class MainActivity extends Activity
             @Override
             public boolean onLongClick(View v)
             {
+
+            	// START - BAD CODE!!!
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run()
@@ -65,6 +70,8 @@ public class MainActivity extends Activity
                     }
                 });
                 thread.start();
+                // END - BAD CODE!!!
+                
                 return true;
             }
         });

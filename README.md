@@ -117,6 +117,37 @@
 	
 	- Update the counter value through the startActivityForResult method.
 	
+---
+
+- **20-04-2015**:
+
+	- StartActivityForResult method.
+	
+	- Resources files, namely the string.xml and the languages support.
+	
+	- Threads. UI Thread and the creation of one alternative Thread (Java style).
+	
+	- Talk about the HTTP protocol.
+	
+	- Start the discussion about the AsyncTask abstract class.
+	
+	
+	*Links/resources from this day*:
+	
+	- [startActivityForResult](http://developer.android.com/reference/android/app/Activity.html#startActivityForResult%28android.content.Intent,%20int%29) 
+	
+	- [Localizing with Resources](http://developer.android.com/guide/topics/resources/localization.html)
+	
+	- [Java Threads](http://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html)
+	
+	- [HTTP RFC2616](http://tools.ietf.org/html/rfc2616), for more information purpose only.
+	
+	- [AsyncTask](http://developer.android.com/reference/android/os/AsyncTask.html)
+	
+	*TPC*:
+	
+	- Replace the code marked as "Bad Code" in the MainActivity class from the AsyncTaskDemo project with one AsyncTask.
+
 	
 
 

@@ -127,7 +127,7 @@
 	
 	- Threads. UI Thread and the creation of one alternative Thread (Java style).
 	
-	- Talk about the HTTP protocol.
+	- Talk about the HTTP protocol and the Android's HttpURLConnection.
 	
 	- Start the discussion about the AsyncTask abstract class.
 	
@@ -141,6 +141,10 @@
 	- [Java Threads](http://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html)
 	
 	- [HTTP RFC2616](http://tools.ietf.org/html/rfc2616), for more information purpose only.
+	
+	- [HttpURLConnection](http://developer.android.com/reference/java/net/HttpURLConnection.html)
+	
+	- [HttpURLConnection vs Apache UrlConnection](http://android-developers.blogspot.in/2011/09/androids-http-clients.html)
 	
 	- [AsyncTask](http://developer.android.com/reference/android/os/AsyncTask.html)
 	

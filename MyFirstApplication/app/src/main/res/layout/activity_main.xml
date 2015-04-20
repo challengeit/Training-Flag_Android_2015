@@ -14,7 +14,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Decrement"
+            android:text="@string/dec"
             android:id="@+id/btnDecr"/>
 
         <TextView
@@ -25,7 +25,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Increment"
+            android:text="@string/inc"
             android:id="@+id/btnIncr"/>
 
     </LinearLayout>
@@ -44,4 +44,10 @@
         android:id="@+id/btnLaunchBrowser"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Result"
+        android:id="@+id/btnResult"
+        />
 </LinearLayout>

@@ -1,6 +1,5 @@
 package android.flag.pt.challenge_it.myfirstapplication;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
@@ -15,8 +14,12 @@ import android.widget.Toast;
 
 /**
  * Main activity for the first Android application.
- * Contains two buttons and one text view.
- * The buttons increments and decrements the integer value of the text view.
+ * Contains five buttons and one text view.
+ * Buttons behavior:
+ *  - increments and decrements the integer value of the text view;
+ *  - show a toast with value of the counter;
+ *  - submit event to ask for an application that is capable of opening a browser with a specific URL;
+ *  - submit intent that expects for a result from the activity that it calls.
  *
  * @author Challenge.IT
  */
@@ -24,6 +27,7 @@ public class MainActivity extends ActionBarActivity /*implements View.OnClickLis
 {
     private final static String LOG_TAG = "LOG_TAG";
     private final static String COUNTER_VALUE_KEY = "COUNTER_VALUE";
+    private final static int RESULT_FLAG = 1;
 
     private TextView txtCounter = null;
 
@@ -60,6 +64,7 @@ public class MainActivity extends ActionBarActivity /*implements View.OnClickLis
         Button btnDecr = (Button)findViewById(R.id.btnDecr);
         Button btnShow = (Button)findViewById(R.id.btnShow);
         Button btnLaunchBrowser = (Button)findViewById(R.id.btnLaunchBrowser);
+        Button btnResult = (Button) findViewById(R.id.btnResult);
 
         /*
          * In this case, the listener is the "this", so this Activity class
@@ -134,6 +139,17 @@ public class MainActivity extends ActionBarActivity /*implements View.OnClickLis
                 Intent intentToOpenSecondActivity = new Intent(getApplicationContext(), SecondActivity.class);
                 intentToOpenSecondActivity.putExtra(SecondActivity.COUNTER_VALUE_KEY_EXTRA, txtCounter.getText());
                 startActivity(intentToOpenSecondActivity);
+            }
+        });
+
+        btnResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Start an activity expecting a result from it, using startActivityForResult.
+                // RESULT_FLAG is a constant defined by us to identify this specific startActivityForResult,
+                // because an Activity can start multiple startActivityForResult and only exists one callback (onActivityResult method) to handle each result.
+                Intent resultIntent = new Intent(getApplicationContext(), ResultActivity.class);
+                startActivityForResult(resultIntent, RESULT_FLAG);
             }
         });
     }
@@ -221,5 +237,22 @@ public class MainActivity extends ActionBarActivity /*implements View.OnClickLis
     {
         Log.d(LOG_TAG, "MainActivity - onDestroy");
         super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        /**
+         * This method is called when an activity returns to this activity, when it was called by startActivityForResult.
+         *
+         * Parameter description:
+         *  requestCode - identifier code for the startActivityForResult invoked
+         *  resultCode - status code of the result from another activity. Can be RESULT_OK or RESULT_CANCELED.
+         *  data - intent with data passed thru activities.
+         */
+        if(requestCode == RESULT_FLAG && resultCode == RESULT_OK) {
+            Toast.makeText(getApplicationContext(), data.getStringExtra(ResultActivity.NAME), Toast.LENGTH_LONG).show();
+        }
     }
 }

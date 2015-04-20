@@ -150,7 +150,7 @@
 	
 	*TPC*:
 	
-	- Replace the code marked as "Bad Code" in the MainActivity class from the AsyncTaskDemo project with one AsyncTask.
+	- Replace the code marked as "Bad Code" in the MainActivity class from the AsyncTaskDemo project, with one AsyncTask.
 
 	
 

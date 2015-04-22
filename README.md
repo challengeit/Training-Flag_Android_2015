@@ -152,6 +152,23 @@
 	
 	- Replace the code marked as "Bad Code" in the MainActivity class from the AsyncTaskDemo project, with one AsyncTask.
 
+---
+
+- **22-04-2015**:
+
+	- AsyncTask.
+	
+	- Services (Started Services and Bound Services).
+	
+	
+	*Links/resources from this day*:
+	
+	- [AsyncTask](http://developer.android.com/reference/android/os/AsyncTask.html)
+	- [Services](http://developer.android.com/guide/components/services.html)
+
+	*TPC*:
+	
+	- Replace the started service from the project TemperatureApp with one [IntentService](http://developer.android.com/reference/android/app/IntentService.html)
 	
 
 

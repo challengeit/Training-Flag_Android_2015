@@ -24,6 +24,10 @@
             android:enabled="true"
             android:exported="false" >
         </service>
+        <service
+            android:name=".TemperatureIntentService"
+            android:exported="false" >
+        </service>
     </application>
 
 </manifest>

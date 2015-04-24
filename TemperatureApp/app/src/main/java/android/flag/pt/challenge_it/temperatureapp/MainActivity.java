@@ -26,7 +26,14 @@ public class MainActivity extends ActionBarActivity {
                 /**
                  * Way to call a new service. Like the Activities, the Services are also invoked using intents.
                  */
-                startService(new Intent(getApplicationContext(), TemperatureService.class));
+                //startService(new Intent(getApplicationContext(), TemperatureService.class));
+
+                /**
+                 * An intent service is called in a same way of a Service with the method startService.
+                 * If we invoke the same service several times, it's only the same reference that executes.
+                 */
+                for(int i = 0; i < 3; i++)
+                    startService(new Intent(getApplicationContext(), TemperatureIntentService.class));
             }
         });
     }

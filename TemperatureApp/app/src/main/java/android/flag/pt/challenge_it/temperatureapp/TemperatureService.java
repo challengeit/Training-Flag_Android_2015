@@ -60,6 +60,7 @@ public class TemperatureService extends Service
                 }
                 catch(Exception e)
                 {
+                    e.printStackTrace();
                     Log.i(SERVICE_LOG, "Cannot get temperature.");
                 }
             }

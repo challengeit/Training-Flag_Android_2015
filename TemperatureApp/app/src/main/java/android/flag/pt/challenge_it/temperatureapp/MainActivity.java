@@ -32,8 +32,16 @@ public class MainActivity extends ActionBarActivity {
                  * An intent service is called in a same way of a Service with the method startService.
                  * If we invoke the same service several times, it's only the same reference that executes.
                  */
-                for(int i = 0; i < 3; i++)
-                    startService(new Intent(getApplicationContext(), TemperatureIntentService.class));
+                //for(int i = 0; i < 3; i++)
+                startService(new Intent(getApplicationContext(), TemperatureIntentService.class));
+            }
+        });
+
+        Button btnList = (Button) findViewById(R.id.btnList);
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), TemperatureListActivity.class));
             }
         });
     }

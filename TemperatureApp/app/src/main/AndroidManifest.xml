@@ -28,6 +28,14 @@
             android:name=".TemperatureIntentService"
             android:exported="false" >
         </service>
-    </application>
 
+        <provider
+            android:name=".provider.TemperatureProvider"
+            android:authorities="android.flag.pt.challenge_it.temperatureapp.provider.temperatureprovider"
+            android:enabled="true"
+            android:exported="false" >
+        </provider>
+
+        <activity android:name=".TemperatureListActivity" />
+    </application>
 </manifest>

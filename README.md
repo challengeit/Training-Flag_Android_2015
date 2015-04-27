@@ -170,5 +170,44 @@
 	
 	- Replace the started service from the project TemperatureApp with one [IntentService](http://developer.android.com/reference/android/app/IntentService.html)
 	
+---
+
+- **24-04-2015**:
+
+	- AlarmManager for scheduling repeating tasks.
+	
+	- NotificationManager for notify the user in the notification bar.
+	
+
+	*Links/resources from this day*:
+	
+	- [AlarmManager](http://developer.android.com/reference/android/app/AlarmManager.html)
+	
+	- [NotificationManager](http://developer.android.com/reference/android/app/NotificationManager.html)
+	
+	- [Scheduling Repeating Alarms](http://developer.android.com/training/scheduling/alarms.html)
+
+---
+
+- **27-04-2015**:
+
+	- BroadcastReceivers.
+	
+	- SharedPreferences.
+	
+	- Options menu.
+	
+	- Class Application.
+	
+
+	*Links/resources from this day*:
+	
+	- [BroadcastReceivers](http://developer.android.com/reference/android/content/BroadcastReceiver.html)
+	
+	- [SharedPreferences](http://developer.android.com/guide/topics/data/data-storage.html#pref)
+	
+	- [Options menu](http://developer.android.com/reference/android/view/Menu.html)
+	
+	- [Class Application](http://developer.android.com/reference/android/app/Application.html)
 
 

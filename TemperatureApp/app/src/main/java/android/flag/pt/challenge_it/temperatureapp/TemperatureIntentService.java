@@ -2,6 +2,8 @@ package android.flag.pt.challenge_it.temperatureapp;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.flag.pt.challenge_it.temperatureapp.model.Temperature;
+import android.flag.pt.challenge_it.temperatureapp.provider.TemperatureManager;
 import android.util.Log;
 
 import org.json.JSONObject;
@@ -19,10 +21,12 @@ import java.net.URL;
 public class TemperatureIntentService extends IntentService {
 
     private static final String INTENT_SERVICE_LOG = "INTENT_SERVICE_LOG";
+    private final TemperatureManager manager;
 
     public TemperatureIntentService()
     {
         super("TemperatureIntentService");
+        this.manager = new TemperatureManager(this);
     }
 
     @Override
@@ -58,10 +62,16 @@ public class TemperatureIntentService extends IntentService {
             double temp = response.getJSONObject("main").getDouble("temp");
 
             Log.i(INTENT_SERVICE_LOG, temp + " ºC");
+
+            /**
+             * Save persistently the temperature in database.
+             *
+             * @pt Guardar na base de dados a informação da temperatura.
+             */
+            manager.save(new Temperature(temp));
         }
         catch(Exception e)
         {
-            e.printStackTrace();
             Log.i(INTENT_SERVICE_LOG, "Cannot get temperature.");
         }
     }

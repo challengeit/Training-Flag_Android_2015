@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WeatherNotifier</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="btnStart">start service</string>
+    <string name="btnStop">stop service</string>
+</resources>

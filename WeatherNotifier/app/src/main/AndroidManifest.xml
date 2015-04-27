@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".WeatherApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,8 +21,18 @@
         </activity>
 
         <service android:name=".WeatherIntentService" />
-        <service android:name=".WeatherService"/>
+        <service android:name=".WeatherService" />
 
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".PreferencesActivity" />
     </application>
 
 </manifest>

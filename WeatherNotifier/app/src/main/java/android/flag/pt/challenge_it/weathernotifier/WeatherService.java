@@ -15,6 +15,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * Serviço que vai buscar a temperatura actual da cidade de Lisboa.
+ * Lança uma notificação sempre que obtem a temperatura.
+ *
+ * @author Challenge.IT
+ */
 public class WeatherService extends Service
 {
     private int count = 0;
@@ -60,6 +66,11 @@ public class WeatherService extends Service
         return START_STICKY;
     }
 
+    /**
+     * Helper method para afectar notificações.
+     * @param title
+     * @param text
+     */
     private void setNotification(String title, String text)
     {
         Notification notification = new NotificationCompat.Builder(getApplicationContext()).setSmallIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha)

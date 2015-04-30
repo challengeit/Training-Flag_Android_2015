@@ -15,10 +15,17 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * Intent service que vai buscar, via HTTP, a temperatura actual de Lisboa.
+ *
+ * @author Challenge.IT
+ */
 public class WeatherIntentService extends IntentService
 {
     public WeatherIntentService()
     {
+        // Invocar o construtor do pai indicando o nome da queue que vai conter o trabalho a executar.
+        // Tipicamente é o próprio nome da classe.
         super("WeatherIntentService");
     }
 

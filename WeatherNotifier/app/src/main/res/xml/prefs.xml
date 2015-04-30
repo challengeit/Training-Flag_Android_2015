@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="INTERVAL_KEY"
+        android:title="interval"
+        android:summary="interval in seconds"
+        android:inputType="number" />
+
+    <PreferenceCategory
+        android:title="Credentials"
+        >
+
+        <EditTextPreference
+            android:key="USERNAME_KEY"
+            android:title="username"
+            android:inputType="text"
+        />
+
+        <EditTextPreference
+            android:key="PASSWORD_KEY"
+            android:title="password"
+            android:inputType="textPassword"
+        />
+        </PreferenceCategory>
+</PreferenceScreen>
